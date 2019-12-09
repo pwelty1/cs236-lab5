@@ -25,6 +25,7 @@ public:
   void clearPredicates();
   Predicate getHeadPred(){return headPred;}
   vector<Predicate> getPredicates() {return predicates;}
+  void setHeadPredi(Predicate pred);
 };
 
 void Rule::toString() {
@@ -59,6 +60,10 @@ void Rule::setHeadPred(string tempid, vector<string> paramz) {
 
 void Rule::clearPredicates() {
   predicates.clear();
+}
+
+void Rule::setHeadPredi(Predicate pred){
+  headPred = pred;
 }
 
 #endif
